@@ -1,0 +1,18 @@
+# Analysis of an Algorithm
+
+## Introduction
+
+The analysis of an algorithm is a process of determining the computational complexity of the algorithm - the amount of time, storage, or other resources needed to execute the algorithm.
+
+## Types of Analysis
+
+1. **Time Complexity**: The amount of time taken by an algorithm to run as a function of the length of the input.
+2. **Space Complexity**: The amount of memory space required by an algorithm as a function of the length of the input.
+
+## Asymptotic Notations
+
+Asymptotic notations are mathematical tools to represent the time complexity of algorithms for asymptotic analysis.
+
+1. **Big O Notation (O)**: It represents the upper bound of the time complexity. It gives the worst-case scenario of an algorithm's running time.
+2. **Omega Notation (Ω)**: It represents the lower bound of the time complexity. It gives the best-case scenario of an algorithm's running time.
+3. **Theta Notation (Θ)**: It represents the tight bound of the time complexity. It gives both the upper and lower bounds of an algorithm's running time.
