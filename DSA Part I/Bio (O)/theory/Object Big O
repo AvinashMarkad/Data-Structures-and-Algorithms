@@ -1,0 +1,146 @@
+# Big O Notation in JavaScript
+
+Big O Notation is a mathematical notation used to describe the performance or complexity of an algorithm. It specifically describes the worst-case scenario and helps to understand the upper limit of the algorithm's running time or space requirements as the input size grows.
+
+## Common Big O Notations
+
+1. **O(1) - Constant Time**: The running time of the algorithm is constant and does not change with the size of the input.
+2. **O(log n) - Logarithmic Time**: The running time grows logarithmically with the input size.
+3. **O(n) - Linear Time**: The running time grows linearly with the input size.
+4. **O(n log n) - Linearithmic Time**: The running time grows in a combination of linear and logarithmic time.
+5. **O(n^2) - Quadratic Time**: The running time grows quadratically with the input size.
+6. **O(2^n) - Exponential Time**: The running time grows exponentially with the input size.
+7. **O(n!) - Factorial Time**: The running time grows factorially with the input size.
+
+## Examples in JavaScript
+
+### O(1) - Constant Time
+
+```javascript
+function getFirstElement(array) {
+  return array[0];
+}
+```
+
+### O(log n) - Logarithmic Time
+
+```javascript
+function binarySearch(array, target) {
+  let left = 0;
+  let right = array.length - 1;
+
+  while (left <= right) {
+    const mid = Math.floor((left + right) / 2);
+    if (array[mid] === target) {
+      return mid;
+    } else if (array[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return -1;
+}
+```
+
+### O(n) - Linear Time
+
+```javascript
+function linearSearch(array, target) {
+  for (let i = 0; i < array.length; i++) {
+    if (array[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+```
+
+### O(n log n) - Linearithmic Time
+
+```javascript
+function mergeSort(array) {
+  if (array.length <= 1) {
+    return array;
+  }
+
+  const mid = Math.floor(array.length / 2);
+  const left = mergeSort(array.slice(0, mid));
+  const right = mergeSort(array.slice(mid));
+
+  return merge(left, right);
+}
+
+function merge(left, right) {
+  let result = [];
+  let leftIndex = 0;
+  let rightIndex = 0;
+
+  while (leftIndex < left.length && rightIndex < right.length) {
+    if (left[leftIndex] < right[rightIndex]) {
+      result.push(left[leftIndex]);
+      leftIndex++;
+    } else {
+      result.push(right[rightIndex]);
+      rightIndex++;
+    }
+  }
+
+  return result.concat(left.slice(leftIndex)).concat(right.slice(rightIndex));
+}
+```
+
+### O(n^2) - Quadratic Time
+
+```javascript
+function bubbleSort(array) {
+  let n = array.length;
+  for (let i = 0; i < n - 1; i++) {
+    for (let j = 0; j < n - i - 1; j++) {
+      if (array[j] > array[j + 1]) {
+        let temp = array[j];
+        array[j] = array[j + 1];
+        array[j + 1] = temp;
+      }
+    }
+  }
+  return array;
+}
+```
+
+### O(2^n) - Exponential Time
+
+```javascript
+function fibonacci(n) {
+  if (n <= 1) {
+    return n;
+  }
+  return fibonacci(n - 1) + fibonacci(n - 2);
+}
+```
+
+### O(n!) - Factorial Time
+
+```javascript
+function generatePermutations(array) {
+  if (array.length === 0) return [[]];
+  const firstElement = array[0];
+  const rest = array.slice(1);
+
+  const permutationsWithoutFirst = generatePermutations(rest);
+  const allPermutations = [];
+
+  permutationsWithoutFirst.forEach((permutation) => {
+    for (let i = 0; i <= permutation.length; i++) {
+      const permutationWithFirst = [
+        ...permutation.slice(0, i),
+        firstElement,
+        ...permutation.slice(i),
+      ];
+      allPermutations.push(permutationWithFirst);
+    }
+  });
+
+  return allPermutations;
+}
+```

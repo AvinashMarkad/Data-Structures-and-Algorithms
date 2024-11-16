@@ -1,0 +1,54 @@
+# Array Big O Notation
+
+Big O notation is used to describe the performance of an algorithm in terms of time complexity and space complexity. When working with arrays in JavaScript, it's important to understand the Big O notation for various operations.
+
+## Common Operations and Their Big O Notation
+
+1. **Accessing an element by index**: O(1)
+
+   - Accessing an element in an array by its index is a constant time operation because it directly retrieves the element.
+
+   ```javascript
+   const arr = [10, 20, 30, 40, 50];
+   console.log(arr[2]); // 30
+   ```
+
+2. **Appending an element**: O(1)
+
+   - Adding an element to the end of an array is generally a constant time operation.
+
+   ```javascript
+   const arr = [10, 20, 30];
+   arr.push(40); // [10, 20, 30, 40]
+   ```
+
+3. **Inserting or removing an element at the beginning**: O(n)
+
+   - Inserting or removing an element at the beginning of an array requires shifting all other elements, which takes linear time.
+
+   ```javascript
+   const arr = [10, 20, 30];
+   arr.unshift(0); // [0, 10, 20, 30]
+   arr.shift(); // [10, 20, 30]
+   ```
+
+4. **Inserting or removing an element in the middle**: O(n)
+
+   - Similar to inserting or removing at the beginning, this operation requires shifting elements, resulting in linear time complexity.
+
+   ```javascript
+   const arr = [10, 20, 30, 40];
+   arr.splice(2, 0, 25); // [10, 20, 25, 30, 40]
+   arr.splice(2, 1); // [10, 20, 30, 40]
+   ```
+
+5. **Searching for an element**: O(n)
+
+   - Searching for an element in an unsorted array requires checking each element, resulting in linear time complexity.
+
+   ```javascript
+   const arr = [10, 20, 30, 40];
+   const index = arr.indexOf(30); // 2
+   ```
+
+Understanding these complexities helps in writing efficient code and optimizing performance when working with arrays in JavaScript.
