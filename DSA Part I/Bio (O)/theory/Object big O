@@ -1,0 +1,57 @@
+// Big O Notation is used to describe the performance or complexity of an algorithm.
+// It specifically describes the worst-case scenario and can be used to describe the execution time required or the space used (e.g. in memory or on disk) by an algorithm.
+
+// Example of different Big O complexities in JavaScript:
+
+// O(1) - Constant Time Complexity
+function constantTimeExample(arr) {
+  return arr[0]; // Accessing the first element of an array takes constant time
+}
+
+// O(n) - Linear Time Complexity
+function linearTimeExample(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]); // Iterating through all elements of an array takes linear time
+  }
+}
+
+// O(n^2) - Quadratic Time Complexity
+function quadraticTimeExample(arr) {
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j < arr.length; j++) {
+      console.log(arr[i], arr[j]); // Nested loops over the array result in quadratic time complexity
+    }
+  }
+}
+
+// O(log n) - Logarithmic Time Complexity
+function logarithmicTimeExample(arr, target) {
+  let left = 0;
+  let right = arr.length - 1;
+  while (left <= right) {
+    let mid = Math.floor((left + right) / 2);
+    if (arr[mid] === target) {
+      return mid; // Binary search takes logarithmic time
+    } else if (arr[mid] < target) {
+      left = mid + 1;
+    } else {
+      right = mid - 1;
+    }
+  }
+  return -1;
+}
+
+// O(n log n) - Linearithmic Time Complexity
+function linearithmicTimeExample(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  const pivot = arr[Math.floor(arr.length / 2)];
+  const left = arr.filter((x) => x < pivot);
+  const right = arr.filter((x) => x > pivot);
+  return [
+    ...linearithmicTimeExample(left),
+    pivot,
+    ...linearithmicTimeExample(right),
+  ]; // Quick sort takes linearithmic time
+}
