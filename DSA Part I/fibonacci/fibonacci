@@ -1,0 +1,36 @@
+# Fibonacci Sequence
+
+## Introduction
+
+The Fibonacci sequence is a series of numbers where each number is the sum of the two preceding ones, usually starting with 0 and 1. It is named after Italian mathematician Leonardo of Pisa, known as Fibonacci.
+
+## Sequence Definition
+
+The Fibonacci sequence is defined by the recurrence relation:
+F(n) = F(n-1) + F(n-2)
+
+With seed values:
+F(0) = 0
+F(1) = 1
+
+## Sequence Example
+
+The first few numbers in the Fibonacci sequence are:
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, ...
+
+## Properties
+
+1. **Golden Ratio**: The ratio of successive Fibonacci numbers converges to the golden ratio (approximately 1.6180339887).
+2. **Closed-form Expression**: Also known as Binet's formula, it provides a way to find the nth Fibonacci number without computing all the preceding ones:
+   F(n) = (φ^n - (1-φ)^n) / √5
+   where φ (phi) is the golden ratio.
+
+## Applications
+
+1. **Computer Algorithms**: Fibonacci numbers are used in algorithms for sorting, searching, and dynamic programming.
+2. **Nature**: Fibonacci sequences appear in biological settings, such as branching in trees, arrangement of leaves on a stem, and the fruit sprouts of a pineapple.
+3. **Art and Architecture**: The golden ratio derived from Fibonacci numbers is used in art and architecture to achieve aesthetically pleasing proportions.
+
+## Conclusion
+
+The Fibonacci sequence is a fundamental concept in mathematics with diverse applications in various fields. Understanding its properties and applications can provide valuable insights into both theoretical and practical problems.
