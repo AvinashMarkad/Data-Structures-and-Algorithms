@@ -1,0 +1,34 @@
+# Big O Notation (O)
+
+Big O Notation is a mathematical notation used to describe the performance or complexity of an algorithm. It specifically describes the worst-case scenario and helps to understand the upper limits of an algorithm.
+
+## Common Big O Notations
+
+- **O(1)**: Constant time complexity
+- **O(log n)**: Logarithmic time complexity
+- **O(n)**: Linear time complexity
+- **O(n log n)**: Linearithmic time complexity
+- **O(n^2)**: Quadratic time complexity
+- **O(2^n)**: Exponential time complexity
+- **O(n!)**: Factorial time complexity
+
+## Example in JavaScript
+
+Here is an example of a function with O(n) time complexity in JavaScript:
+
+```javascript
+function linearSearch(arr, target) {
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] === target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const array = [1, 2, 3, 4, 5];
+const target = 3;
+console.log(linearSearch(array, target)); // Output: 2
+```
+
+In this example, the `linearSearch` function iterates through the array to find the target element. In the worst case, it will check each element once, resulting in O(n) time complexity.
