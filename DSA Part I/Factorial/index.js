@@ -8,10 +8,10 @@ function factorial(n) {
 
 console.log(factorial(5)); // 120
 
-function Factorial(n) {
-  if (n === 0) {
-    return 1;
-  }
-  return n * Factorial(n - 1);
-}
-console.log(Factorial(0)); // 120
+// function Factorial(n) {
+//   if (n === 0) {
+//     return 1;
+//   }
+//   return n * Factorial(n - 1);
+// }
+// console.log(Factorial(0)); // 120
