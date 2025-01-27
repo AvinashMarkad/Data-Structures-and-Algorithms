@@ -16,7 +16,6 @@ console.log(isPowerOfTwoBitwise(16)); // true
 //   if (n < 1) {
 //     return false;
 //   }
-
 //   while (n > 1) {
 //     if (n % 2 !== 0) {
 //       return false;

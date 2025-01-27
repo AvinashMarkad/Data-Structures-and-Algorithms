@@ -1,12 +1,16 @@
-function factorial(n) {
-  let fact = 1;
-  for (let i = 2; i <= n; i++) {
-    fact *= i;
-  }
-  return fact;
-}
+// Write a function that calculates the factorial of a non negative interger.
 
-console.log(factorial(5)); // 120
+function Factorial(n) {
+  let result = 1;
+  for (let i =2; i<=n; i++){
+    // result = result * i;
+    result *= i;
+  }
+  return result;
+}
+console.log(Factorial(0)); // 1
+console.log(Factorial(1)); // 1
+console.log(Factorial(5)); // 120
 
 // function Factorial(n) {
 //   if (n === 0) {
