@@ -24,3 +24,22 @@ for (let i = 0; i < arr.length; i++){
     console.log(arr[i]);
 }
 
+console.log(".................................................pop ....................................................");
+arr.pop();
+arr.pop();
+arr.pop();
+arr.pop();
+
+for (let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
+
+console.log("................................................. shift ....................................................");
+arr.shift();
+arr.shift();
+arr.shift();
+arr.shift();
+
+for (let i = 0; i < arr.length; i++){
+    console.log(arr[i]);
+}
