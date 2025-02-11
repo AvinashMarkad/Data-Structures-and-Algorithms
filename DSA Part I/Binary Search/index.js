@@ -12,7 +12,8 @@ var binarySearch = (sortedArray, target) => {
     let rp = sortedArray.length - 1;
 
     while (lp <= rp) {
-        let mid = Math.floor((lp + rp) / 2);
+        // let mid = Math.floor((lp + rp) / 2);
+        let mid = Math.floor(lp + (rp - lp) / 2);
 
         if (sortedArray[mid] === target) {
             return mid;
