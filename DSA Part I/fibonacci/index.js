@@ -5,7 +5,7 @@ function fibonacci(n) {
   }
   return fib;
 }
-console.log(fibonacci(3)); // should print 5
+console.log(fibonacci(10)); // should print 5
 //.......................................................
 
 // function fibonacci(n) {
