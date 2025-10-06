@@ -4,4 +4,4 @@ let arr2 = arr1.filter((value) => {
     return value % 2 === 0 && value < 7 && value > 0;
 });
 
-console.log(arr2); // [1, 2, 3, 4]
+console.log(arr2); // [2, 4, 6]
